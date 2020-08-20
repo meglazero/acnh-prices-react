@@ -1,13 +1,16 @@
 import React from 'react';
-// import Buttons from './Buttons';
+import Buttons from './Buttons';
 
 function Tablebox(props){
     if(props.bugs){
         return(
             <div className="tablebox">
-                {/* <Buttons
-                    bugs={props.bugs}
-                    sortName={props.sortName}/> */}
+                <Buttons
+                    name={'bugs'}
+                    sortName={props.sortName}/>
+                <Buttons
+                    name={'bugs'}
+                    sortPrice={props.sortPrice}/>
                 <div className="tableHeader bugs">
                     <div>Name</div>
                     <div>Image</div>
@@ -29,6 +32,12 @@ function Tablebox(props){
     } else if (props.fish){
         return(
             <div className="tablebox">
+                <Buttons
+                    name={'fish'}
+                    sortName={props.sortName}/>
+                <Buttons
+                    name={'fish'}
+                    sortPrice={props.sortPrice}/>
                 <div className="tableHeader fish">
                     <div>Name</div>
                     <div>Image</div>
@@ -52,6 +61,12 @@ function Tablebox(props){
     } else if (props.sea){
         return(
             <div className="tablebox">
+                <Buttons
+                    name={'sea'}
+                    sortName={props.sortName}/>
+                <Buttons
+                    name={'sea'}
+                    sortPrice={props.sortPrice}/>
                 <div className="tableHeader sea">
                     <div>Name</div>
                     <div>Image</div>
