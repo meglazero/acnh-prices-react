@@ -5,9 +5,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  background-color: #c7c7c7;
+  margin: none;
+  padding: none;
+  font-style: none;
+  width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.tables{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 97%;
+  margin: auto;
+}
+
+.tablebox{
+  flex: 1;
+  text-align: center;
+  margin: 3px;
+}
+
+.image{
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+}
+
+.gridTable,
+.tableHeader{
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  border: 1px solid black;
+  border-bottom: 0px;
+  display: grid;
+  padding: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.gridTable:last-child{
+  border-bottom: 1px solid black;
+}
+
+.bugs{
+  background-color: #21c74b24;
+  grid-template-columns: 15% 15% 15% 37% 12%;
+}
+
+.fish{
+  grid-template-columns: 15% 15% 15% 25% 12% 12%;
+  background-color: #0878c224;
+}
+
+.sea{
+  background-color: #7b20c524;
+  grid-template-columns: 25% 15% 37% 15%;
 }
