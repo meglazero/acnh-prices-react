@@ -5,12 +5,26 @@ function Tablebox(props){
     if(props.bugs){
         return(
             <div className="tablebox">
-                <Buttons
-                    name={'bugs'}
-                    sortName={props.sortName}/>
-                <Buttons
-                    name={'bugs'}
-                    sortPrice={props.sortPrice}/>
+                <div className="buttonbox">
+                    <Buttons
+                        name={'bugs'}
+                        sortName={props.sortName}/>
+                    <Buttons
+                        name={'bugs'}
+                        sortPrice={props.sortPrice}/>
+                    <Buttons
+                        name={'bugs'}
+                        clearTable={props.clearTable}/>
+                    <Buttons
+                        name={'bugs'}
+                        monthFilter={props.monthFilter}/>
+                    <Buttons
+                        name={'bugs'}
+                        hourFilter={props.hourFilter}/>
+                    <Buttons
+                        name={'bugs'}
+                        hourMonthFilter={props.hourMonthFilter}/>
+                </div>
                 <div className="tableHeader bugs">
                     <div>Name</div>
                     <div>Image</div>
@@ -32,12 +46,26 @@ function Tablebox(props){
     } else if (props.fish){
         return(
             <div className="tablebox">
-                <Buttons
-                    name={'fish'}
-                    sortName={props.sortName}/>
-                <Buttons
-                    name={'fish'}
-                    sortPrice={props.sortPrice}/>
+                <div className="buttonbox">
+                    <Buttons
+                        name={'fish'}
+                        sortName={props.sortName}/>
+                    <Buttons
+                        name={'fish'}
+                        sortPrice={props.sortPrice}/>
+                    <Buttons
+                        name={'fish'}
+                        clearTable={props.clearTable}/>
+                    <Buttons
+                        name={'fish'}
+                        monthFilter={props.monthFilter}/>
+                    <Buttons
+                        name={'fish'}
+                        hourFilter={props.hourFilter}/>
+                    <Buttons
+                        name={'fish'}
+                        hourMonthFilter={props.hourMonthFilter}/>
+                </div>
                 <div className="tableHeader fish">
                     <div>Name</div>
                     <div>Image</div>
@@ -61,12 +89,26 @@ function Tablebox(props){
     } else if (props.sea){
         return(
             <div className="tablebox">
-                <Buttons
-                    name={'sea'}
-                    sortName={props.sortName}/>
-                <Buttons
-                    name={'sea'}
-                    sortPrice={props.sortPrice}/>
+                <div className="buttonbox">
+                    <Buttons
+                        name={'sea'}
+                        sortName={props.sortName}/>
+                    <Buttons
+                        name={'sea'}
+                        sortPrice={props.sortPrice}/>
+                    <Buttons
+                        name={'sea'}
+                        clearTable={props.clearTable}/>
+                    <Buttons
+                        name={'sea'}
+                        monthFilter={props.monthFilter}/>
+                    <Buttons
+                        name={'sea'}
+                        hourFilter={props.hourFilter}/>
+                    <Buttons
+                        name={'sea'}
+                        hourMonthFilter={props.hourMonthFilter}/>
+                </div>
                 <div className="tableHeader sea">
                     <div>Name</div>
                     <div>Image</div>
