@@ -72,3 +72,80 @@ code {
   background-color: #7b20c524;
   grid-template-columns: 25% 15% 37% 15%;
 }
+
+button{
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 4px;
+  border: 3px double #464646;
+  min-height: 40px;
+}
+
+.buttonbox {
+  display: grid;
+  grid-template: 4rem 4rem / 1fr 1fr 1fr;
+  margin: 2px;
+  padding: auto;
+  width: auto;
+  text-align: center;
+}
+
+@media(max-width: 1100px){
+  body{
+    font-size: .8em;
+  }
+
+  .gridTable,
+  .tableHeader{
+    font-size: .8em;
+  }
+
+  .tablebox{
+    min-width: 200px;
+  }
+
+  .bugs{
+    grid-template-columns: 18% 12% 15% 37% 12%;
+  }
+  
+  .fish{
+    grid-template-columns: 18% 12% 15% 22% 12% 12%;
+  }
+
+  .sea{
+    grid-template-columns: 25% 12% 50% 12%;
+  }
+  
+  .tables{
+    width: 100%;
+  }
+  
+  button{
+    font-size: .8em;
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid #464646;
+  }
+}
+
+@media(max-width: 500px){
+  body{
+    font-size: .7em;
+  }
+
+  .gridTable,
+  .tableHeader{
+    font-size: .7em;
+  }
+
+  .tables{
+    width: 100%;
+  }
+
+  button{
+    margin: 2px;
+    padding: 2px;
+    border: 1px solid #464646;
+  }
+}
