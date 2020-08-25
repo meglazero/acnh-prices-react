@@ -123,7 +123,7 @@ class Tablebox extends Component {
             const key = element === BugTable ? 5 : 6;
             const arr = [...element].filter(element => {
                 return (element[key + Number(
-                    this.props.time.month)] === "✓")
+                    this.props.time.month) + 1] === "✓")
             })
             return (this.setState({ arr: arr }))
         } else if (this.props.sea) {
@@ -181,7 +181,7 @@ class Tablebox extends Component {
             const key = element === BugTable ? 5 : 6;
             const arr = [...element].filter(element => {
                 return (element[key].includes(Number(this.props.time.hour)) &&
-                    element[key + Number(this.props.time.month)] === "✓")
+                    element[key + Number(this.props.time.month) + 1] === "✓")
             })
             return (this.setState({ arr: arr }))
         } else if (this.props.sea) {
