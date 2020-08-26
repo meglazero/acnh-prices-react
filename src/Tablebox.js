@@ -158,7 +158,9 @@ class Tablebox extends Component {
                 if (start > 12) { PMStart = true }
                 if (end < 13) { AMEnd = true }
 
-                if (PMStart && AMEnd) {
+                if (element.activeMonths.northern[0].isAllDay === true){
+                    return element.activeMonths.northern[0].isAllDay === true
+                } else if (PMStart && AMEnd) {
                     if (Number(hour) < 13) {
                         return Number(hour) < end
                     } else {
@@ -189,6 +191,7 @@ class Tablebox extends Component {
                 const start = Number(element.activeMonths.northern[0].activeHours[0][0]);
                 const end = Number(element.activeMonths.northern[0].activeHours[0][1]);
                 const hour = this.props.time.hour
+                const monthCheck = element.activeMonths.northern.some(item => item.month === Number(this.props.time.month + 1))
 
                 let PMStart = false
                 let AMEnd = false
@@ -196,18 +199,16 @@ class Tablebox extends Component {
                 if (start > 12) { PMStart = true }
                 if (end < 13) { AMEnd = true }
 
-
-                if (PMStart && AMEnd) {
+                if (element.activeMonths.northern[0].isAllDay === true){
+                    return monthCheck
+                } else if (PMStart && AMEnd) {
                     if (Number(hour) < 13) {
-                        return Number(hour) < end &&
-                            element.activeMonths.northern.some(item => item.month === Number(this.props.time.month + 1))
+                        return Number(hour) < end && monthCheck
                     } else {
-                        return Number(hour) >= start &&
-                            element.activeMonths.northern.some(item => item.month === Number(this.props.time.month + 1))
+                        return Number(hour) >= start && monthCheck
                     }
                 } else {
-                    return start < Number(hour) && Number(hour) < end &&
-                        element.activeMonths.northern.some(item => item.month === Number(this.props.time.month + 1))
+                    return start < Number(hour) && Number(hour) < end && monthCheck
                 }
             })
             return (this.setState({ arr: arr }))
